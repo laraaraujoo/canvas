@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste aula</title>
+</head>
+<body>
+
+<canvas id="tela" width="400" height="400" style="border: solid red 2px"></canvas>
+
+<script>
+    function desenhar() {
+      
+       var canvas = document.getElementById('tela');
+        var context = canvas.getContext('2d');
+
+
+         /* QUADRADO PREENCHIDO
+        context.fillStyle = "red";
+        context.fillRect(100, 100, 100, 100);
+        context.lineWidth = 3;
+        context.strokeStyle = "blue";
+        context.strokeRect(100, 100, 100, 100);
+        */
+
+        context.beginPath();
+
+        // DESENHANDO A ESTRELA
+        context.moveTo(75, 250); // Ponto inicial
+        context.lineTo(150, 50);
+        context.lineTo(225, 250);
+        context.lineTo(50, 120);
+        context.lineTo(250, 120);
+        context.lineTo(75, 250);
+// Configurar a linha
+        context.lineWidth = 2;
+        context.strokeStyle = "blue";
+// Traçar as linhas do caminho
+        context.stroke();
+
+    }
+
+
+    desenhar();
+</script>
+
+</body>
+</html>
